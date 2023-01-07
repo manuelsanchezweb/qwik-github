@@ -1,0 +1,74 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+:root {
+  --qwik-dark-blue: #006ce9;
+  --qwik-light-blue: #18b6f6;
+  --qwik-light-purple: #ac7ff4;
+  --qwik-dark-purple: #713fc2;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  font-size: clamp(16px, 5vw, 2.6rem);
+}
+
+.repos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.repos span {
+  text-align: center;
+}
+
+.repos__container ul {
+  column-gap: "50px";
+  column-count: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .repos__container ul {
+    column-count: 2;
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 2rem;
+}
+
+.logos svg {
+  height: auto;
+  width: 200px;
+}
